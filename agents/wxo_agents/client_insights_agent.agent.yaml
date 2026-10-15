@@ -1,0 +1,22 @@
+spec_version: v1
+kind: external
+name: client_insights_agent
+title: Client Insights Agent
+nickname: client_insights_agent
+provider: external_chat/A2A/0.3.0
+description: |
+  A LangGraph agent (OpenAI model) that reads the Network Rail "Road Haulage and
+  Warehousing" tender PDF and extracts client insight: client background, client
+  requirements, client pain points and client key drivers. Use this agent for any
+  request to understand the client, the tender, or the procurement.
+tags:
+  - a2a
+  - langgraph
+  - tender
+api_url: "http://localhost:10000"
+auth_scheme: NONE
+chat_params:
+  stream: false
+config:
+  hidden: false
+  enable_cot: false

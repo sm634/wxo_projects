@@ -1,0 +1,22 @@
+# Python 3.13 environment for the wxo <-> LangGraph A2A test.
+# Create with:  uv venv --python 3.13 .venv && uv pip install --python .venv/bin/python -r requirements.txt
+
+# watsonx Orchestrate ADK (provides the `orchestrate` CLI)
+ibm-watsonx-orchestrate
+
+# A2A protocol SDK. Pinned to 0.3.x: watsonx Orchestrate supports A2A spec 0.3.0
+# (provider: external_chat/A2A/0.3.0). The 1.x SDK implements a newer, incompatible spec.
+a2a-sdk[http-server]>=0.3,<0.4
+
+# LangGraph agent
+langgraph
+langchain
+langchain-openai
+
+# Tender PDF parsing
+pypdf
+
+# Server / client utilities
+uvicorn
+httpx
+python-dotenv
